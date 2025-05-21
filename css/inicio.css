@@ -1,0 +1,657 @@
+#pie{
+    background-color:#2F2F2F;
+    color:white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+   display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#pie2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 12px;
+}
+#registrar{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#contacto2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+#redes{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+
+}
+#redess{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+
+}
+#cosas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin: 20px;
+}
+#titulo2{
+    font-size: 9px;
+}
+#barra{
+    margin: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+#imagen1{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+}
+#texto1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px;
+
+}
+#texto2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+
+}
+#imagen2{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    margin:20px;
+}
+#cuerpo{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+#accesos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-direction: row;
+
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#logo2{
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+}
+#carrito {
+    position: relative; 
+    display: inline-block; 
+}
+
+#carro,#casa,#usuario{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+  #columna{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+#items{
+   margin-top: 15px;
+}
+
+#titulo{
+    
+        font-family: 'Mochiy Pop P One', sans-serif; 
+        font-size: 3rem;
+        font-weight: 700; 
+        color: #B22222; 
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        margin-top: 20px; 
+        margin-bottom: 20px;
+        padding: 10px;
+}
+#facebook,#twitter,#instagram{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    border: #2F2F2F 2px solid;
+    border-radius: 20px;
+    width: 350px;
+    height: 500px;
+}
+#registro{
+    justify-content: center;
+    margin: 20px;
+    border: #2F2F2F 2px solid;
+    border-radius: 20px;
+    width: 750px;
+    height: 450px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+    width: 650px;
+}
+#registroboton{
+    margin-top: 10px;
+}
+#sesion{
+    margin-top: 10px;
+}
+#mensaje2{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+#info,#reserva,#carta,#puntos{
+    cursor: pointer;
+}
+
+#texto{
+    margin: 20px;
+    font-size: 15px;
+}
+
+#sake{
+    color: #B22222; 
+}
+#centro{
+    font-size: 20px;
+}
+#div1{
+    margin: 15px;
+}
+#div1 input,h3{
+    margin: 30px;
+}
+.mesa{
+    width: 100px;
+    height: 100px;
+    margin: 45px;
+    cursor: pointer;
+}
+#divreserva{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+justify-content: center;}
+
+#bienvenido{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin: 20px;
+}
+#nombre{
+    font-family: 'Mochiy Pop P One', sans-serif; 
+    color: #B22222;
+}   
+#ofertas{
+    width: 100px;
+    height: 100px;
+}
+
+#fotocarta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#carta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+#input-cantidad{
+width: 65px;
+height: 35px;
+text-align: center;
+border-radius: 5px;
+}
+#controlcarta{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    justify-content: space-around;
+}
+#carrito {
+  position: relative;
+  display: inline-block; 
+}
+
+#contador-carrito {
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  z-index: 10000;
+  pointer-events: none; 
+}
+
+#listacarro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    border: #2F2F2F 2px solid;
+    border-radius: 20px;
+    width: 650px;
+    height: 100px;
+}
+#inputcarro{
+    background-color: #eae7e2;
+    width: 65px;
+height: 35px;
+text-align: center;
+border-radius: 5px;
+color: #111;
+}
+#cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    border: #2F2F2F 2px solid;
+    border-radius: 20px;
+    width: 650px;
+    height: 100px;
+}
+#totalcarro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    border: #2F2F2F 2px solid;
+    border-radius: 20px;
+    width: 650px;
+    height: 100px;
+}
+
+#fotopequecarro{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#divs{
+    border-radius: 15px;
+}
+
+#todocarro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resumen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #2F2F2F 2px solid;
+    border-radius: 20px;
+    margin: 20px;
+   width: 550px;
+    height: 200px;
+}
+#pago{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+   width: 550px;
+    height: 300px;
+}
+.notas{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+   width: 550px;
+    height: 200px;
+}
+#paypal-button-container{
+    width: 400px;
+}
+ #junte .resumen ul li::marker {
+    content: '🍣'; 
+    margin-right: 8px;
+  }
+#junte{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#progreso{width: 320px;
+display: flex;
+align-items: center;}
+#barramensaje,#barramensajee{display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;}
+#barraa{height: 60px;}
+#ventanaJuego {
+    width: 500px;
+    height: 400px;
+    border: 5px solid #333;
+    border-radius: 10px;
+    position: relative;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #sushi {
+    font-size: 60px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    animation: bounce 1s infinite;
+  }
+  
+  #sushi:hover {
+    transform: scale(1.2);
+  }
+  
+  #mejora {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #mejora:hover {
+    background-color: #ffaa00;
+  }
+  
+  #puntoss {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  #juego {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+    @keyframes reboteSushi {
+        0% {
+            transform: translateY(0);
+        }
+        30% {
+            transform: translateY(-10px); 
+        }
+        50% {
+            transform: translateY(0); 
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    #neon1,#neon2 ,#neon3 ,#neon4{
+        color: #B22222;
+    text-shadow:
+        0 0 5px #ff4d4d,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff4d4d,
+        0 0 40px #ff1a1a;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    }
+    #carruselentero {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+#carruselentero img {
+  object-fit: cover;
+  height: 450px;
+}
+#div2{
+    margin-left: 20px;
+}
+#infomensajepedido,#infomensajepedidoo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#mesas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-usuario ul li:hover {
+  background-color: #f5c6c6; /* un rojo clarito, por ejemplo */
+  cursor: pointer;
+}
+#menu-usuario{
+        font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+.tarjeta {
+  display: inline-block; 
+  vertical-align: top;
+  width: 30%;        
+  margin: 15px;            
+  background:#2F2F2F;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 10px 10px 20px #151515, -10px -10px 20px #262626;
+  transition: transform 0.3s ease;
+  color: #f1f1f1;
+  box-sizing: border-box; }
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+.info {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.editar {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tarjeta.editando .editar {
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #f1f1f1;
+        font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.acciones {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.editar-btn {
+  background: #f0a500;
+  color: #2F2F2F;
+}
+
+.guardar-btn {
+  background: #f05454;
+  color: white;
+}
+
+.editar-btn:hover {
+  background: #d98e00;
+}
+
+.guardar-btn:hover {
+  background: #d94141;
+}
+#btnguardar,#btnactualizar{
+  background-color: #B22222;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 2rem;
+  transition: all 0.3s ease;
+}
+
+#btnguardar:hover,#btnactualizar:hover {
+  background-color: #8b1a1a;
+}
+
+#datos-tab,#actividad-tab,#seguridad-tab {
+  border-color: #f4c2c2 #f4c2c2 #fff;
+  color: #B22222;
+  font-weight: bold;
+}
+#menu-usuario ul li {
+  border-bottom: 1px solid #ccc;
+}
+
+#menu-usuario ul li:last-child {
+  border-bottom: none;
+}
+.nav-tabs {
+  position: relative;
+}
+
+.nav-tabs::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #B22222;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  position: relative;
+}
+
+.nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #B22222;
+  transition: all 0.3s ease;
+}
+
+
