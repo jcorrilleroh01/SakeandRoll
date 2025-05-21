@@ -1,4 +1,4 @@
-# SakeandRoll
+# Sake&Roll
 
 Repositorio con el proyecto completo de la web **Sake&Roll**, un restaurante de comida japonesa y fusión asiática que busca ofrecer una experiencia única combinando la tradición del sushi y la cultura del sake con un ambiente moderno y acogedor.
 
