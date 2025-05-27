@@ -202,3 +202,4 @@ function actualizarcontraseña() {
   }
 }
 document.getElementById("perfil").addEventListener("click", miperfil);
+ 

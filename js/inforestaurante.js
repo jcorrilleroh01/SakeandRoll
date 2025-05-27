@@ -6,7 +6,7 @@ function info() {
     let carrusel = `
   <div class="col-12 mb-4">
     <div class="text-center p-3">
-      <h2 class="display-6 fw-bold mb-2">Bienvenido a <span id="sake">Sake&Roll</span></h2>
+      <h2 class="display-6 fw-bold m-2">Bienvenido a <span id="sake">Sake&Roll</span></h2>
       <p class="lead text-muted">Donde la tradición oriental se encuentra con la innovación culinaria.</p>
     </div>
   </div>

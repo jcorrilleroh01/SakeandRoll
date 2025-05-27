@@ -168,7 +168,7 @@ body{
 }
 #registro{
     justify-content: center;
-    margin: 20px;
+    margin: 90px;
     border: #2F2F2F 2px solid;
     border-radius: 20px;
     width: 750px;
@@ -178,7 +178,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 20px;
     flex-wrap: wrap;
     width: 650px;
 }
