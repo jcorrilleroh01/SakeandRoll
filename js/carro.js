@@ -17,7 +17,7 @@ function listarcarro() {
     importetotal = 0;
     cuerpo.innerHTML = "";
     let cookieValue = getCookie("carrito");
-    if (cookieValue) {
+if (cookieValue && cookieValue !== "[]"){
       let total = JSON.parse(cookieValue);
       cuerpo.innerHTML += "<h1 class='d-flex justify-content-center'>Carro</h1>";
       cuerpo.innerHTML += "<div id='cabecera'><h3>Plato</h3><h3>Cantidad</h3><h3>Precio</h3></div>";
@@ -91,7 +91,7 @@ function listarOfertas() {
                                     <img id='fotopequecarro' src='img/oferta.png'>
                                     ${ofertas[x].plato}
                                     ${ofertas[x].precio}€
-                                    <button class='btn btn-danger' onclick="borraritem('${ofertas[x].plato}', ${ofertas[x].precio})">X</button>
+                                    <button class='btn btn-danger' onclick="borraritem('${ofertas[x].plato}', ${ofertas[x].precio},event)">X</button>
                                     </div>`;
       }
     }
@@ -99,11 +99,12 @@ function listarOfertas() {
 }
 
 function borraritem(plato, precio, event) {
-  let platoDiv = event.target.parentElement;
-  platoDiv.remove();
-  let inputCantidad = event.target.parentElement.querySelector("input[type='number']");
-  let cantidadEliminada = parseInt(inputCantidad.value);
+  
+let inputCantidad = event.target.parentElement.querySelector("input[type='number']");
+let cantidadEliminada = inputCantidad ? parseInt(inputCantidad.value) : 1;
 
+let platoDiv = event.target.parentElement;
+  platoDiv.remove();
   let cookieValue = getCookie("carrito");
   if (cookieValue) {
     let carrito = JSON.parse(cookieValue);
@@ -115,6 +116,16 @@ function borraritem(plato, precio, event) {
         }
         break;
       }
+    }
+    if(precio==0){
+      let xhr3= new XMLHttpRequest();
+      xhr3.open("POST", "php/borraroferta.php", true);
+      let data3 = new FormData();
+      data3.append("plato", plato);
+      data3.append("usuario", document.getElementById("nombre").innerHTML);
+      xhr3.send(data3);
+
+
     }
     setCookie(JSON.stringify(carrito));
     actualizarContadorCarrito();
