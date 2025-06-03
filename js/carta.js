@@ -91,7 +91,11 @@ function setCookie(value) {
     document.cookie = "carrito=" + value + "; expires=" + ExpirationDate + "; path=/";
 }
 function añadir(plato, boton) {
-    let cantidad2 = boton.parentNode.querySelector(".input-cantidad").value;
+modalCarrito(); 
+setTimeout(() => {
+  const modal = document.getElementById('modalCarrito');
+  if (modal) modal.remove();
+}, 1000);    let cantidad2 = boton.parentNode.querySelector(".input-cantidad").value;
     if (isNaN(cantidad2) || cantidad2 === "" || parseInt(cantidad2) <= 0) {
         return;
     }

@@ -265,3 +265,76 @@ let h3 = document.createElement("h3");
     modal.appendChild(contenido);
     document.body.appendChild(modal);
 }
+ function modalCarrito() {
+      if (document.getElementById('modalCarrito')) return;
+
+      const estilo = document.createElement('style');
+      estilo.textContent = `
+        #modalCarrito {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+          font-family: 'Mochiy Pop P One', sans-serif;
+        }
+        #modalContenido {
+          background-color: #fff8f0;
+          border: 3px solid #B22222;
+          border-radius: 16px;
+          padding: 20px;
+          width: 90%;
+          max-width: 400px;
+          text-align: center;
+          position: relative;
+        }
+        #modalContenido h2 {
+          color: #B22222;
+          margin-bottom: 15px;
+        }
+        #modalContenido p {
+          color: #333;
+          font-size: 1.1rem;
+        }
+        #modalContenido button {
+          background-color: #B22222;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          margin-top: 15px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        #modalContenido button:hover {
+          background-color: #a11d1d;
+        }
+        #cerrarModal {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          font-size: 24px;
+          color: #B22222;
+          cursor: pointer;
+        }
+      `;
+      document.head.appendChild(estilo);
+
+      const modal = document.createElement('div');
+      modal.id = 'modalCarrito';
+
+      modal.innerHTML = `
+        <div id="modalContenido">
+          <div id="cerrarModal">×</div>
+          <h2>🍱 ¡Añadido al carrito!</h2>
+          <p>Tu producto ha sido añadido correctamente al carrito.</p>
+          <button id="verCarrito">Ver carrito</button>
+        </div>
+      `;
+
+      modal.querySelector('#cerrarModal').onclick = () => modal.remove();
+      modal.querySelector('#verCarrito').onclick = () => listarcarro();
+
+      document.body.appendChild(modal);
+    }
