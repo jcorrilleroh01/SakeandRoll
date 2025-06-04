@@ -16,8 +16,14 @@ $resultado = $con->query($sql_comprobar);
 if ($resultado->num_rows > 0) {
     echo "El usuario ya existe con este usuario. Por favor, pruebe con otro.";
 } else {
-    $sql_insertar = "INSERT INTO `usuarios` (`usuario`, `contraseña`, `nombreape`,`correo`,`telefono`,`direccion` ) VALUES ('$usuario', '$contraseña', '$nombape', '$correo', '$tlf','$direccion')";
-    $sql_puntos="INSERT INTO `puntos` (`idusuario`, `puntos`) VALUES ((SELECT idusuario FROM usuarios WHERE usuario='$usuario'), 0)";
+    $sql_insertar = "INSERT INTO `usuarios` 
+    (`usuario`, `contraseña`, `nombreape`,`correo`,`telefono`,`direccion` ) 
+    VALUES ('$usuario', '$contraseña', '$nombape', '$correo', '$tlf','$direccion')";
+
+    $sql_puntos="INSERT INTO `puntos` 
+    (`idusuario`, `puntos`) 
+    VALUES ((SELECT idusuario FROM usuarios WHERE usuario='$usuario'), 0)";
+    
     if (mysqli_query($con, $sql_insertar)) {
         echo "Registro exitoso!";
         mysqli_query($con, $sql_puntos);

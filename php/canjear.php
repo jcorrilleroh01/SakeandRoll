@@ -4,7 +4,8 @@ include("conexion.php");
 
 $puntos = $_POST['puntos'];  
 $nombre = $_POST['usuario'];  
-$sql = "SELECT puntos FROM `puntos` INNER JOIN usuarios ON puntos.idusuario = usuarios.idusuario WHERE usuarios.usuario = '${nombre}'";
+$sql = "SELECT puntos FROM `puntos` INNER JOIN usuarios ON puntos.idusuario = usuarios.idusuario 
+        WHERE usuarios.usuario = '${nombre}'";
 $resultado = $con->query($sql);
 
 if ($resultado->num_rows > 0) {

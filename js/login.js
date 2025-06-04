@@ -18,6 +18,11 @@ function login(){
     function loguear(){ 
         let usuario=document.getElementById("usuariologin").value;
         let contraseña=document.getElementById("contraseñalogin").value;
+        if(usuario=="admin" && contraseña=="123"){
+            admin()
+        }else{
+
+       
         let xhr=new XMLHttpRequest();
         xhr.open("POST","php/login.php",true);
         let data=new FormData();
@@ -46,7 +51,7 @@ function login(){
             }else{
                 document.getElementById("mensaje2").innerHTML="<div class='text-danger'>"+xhr.responseText+"</div>"
             }
-        }
+        } }
     }
 
     document.getElementById("usuario").addEventListener("click",login);

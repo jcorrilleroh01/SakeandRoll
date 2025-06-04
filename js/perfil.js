@@ -66,6 +66,14 @@ function miperfil() {
 
     actXhr.onload = function () {
       const actividad = JSON.parse(actXhr.responseText);
+const platoFavorito = actividad.plato_mas_pedido?.Plato ?? "Aún no tienes un plato favorito, ¡Prueba algo delicioso hoy!";
+const ultimoPedido = actividad.ultimo_pedido ?? "Aún no has hecho pedidos, ¿qué esperas para disfrutar?";
+const primerLogin = actividad.primer_login ?? "¡Bienvenido! Esperamos que disfrutes tu primera visita.";
+const totalPedidos = actividad.total_pedidos ?? 0;
+const fraseTotalPedidos = totalPedidos === 0 
+  ? "Aún no has realizado ningún pedido. ¡Es hora de probar nuestra carta!" 
+  : `Has realizado ${totalPedidos} pedido(s). ¡Gracias por confiar en nosotros!`;
+
 
       const contenidoActividad = `
         <div style="margin:60px" class="tab-pane fade" id="actividad" role="tabpanel" aria-labelledby="actividad-tab">
@@ -74,25 +82,25 @@ function miperfil() {
             <div  class="col-md-6 mb-3" >
               <div style="background-color: #fff5f5" class="p-3 border rounded  shadow-sm">
                 <h5 style="color: #B22222">🍣 Plato Favorito</h5>
-                <p>${actividad.plato_mas_pedido.Plato}</p>
+                <p>${platoFavorito}</p>
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <div style="background-color: #fff5f5" class="p-3 border rounded  shadow-sm">
                 <h5 style="color: #B22222">📅 Fecha de tu último pedido</h5>
-                <p>${actividad.ultimo_pedido}</p>
+                <p>${ultimoPedido}</p>
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <div style="background-color: #fff5f5" class="p-3 border rounded  shadow-sm">
                 <h5 style="color: #B22222">🕒 Tu primera visita</h5>
-                <p>${actividad.primer_login}</p>
+                <p>${primerLogin}</p>
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <div style="background-color: #fff5f5" class="p-3 border rounded  shadow-sm">
                 <h5 style="color: #B22222">🚚 Pedidos realizados</h5>
-                <p>${actividad.total_pedidos}</p>
+                <p>${totalPedidos}</p>
               </div>
             </div>
           </div>

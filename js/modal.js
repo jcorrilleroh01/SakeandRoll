@@ -338,3 +338,102 @@ let h3 = document.createElement("h3");
 
       document.body.appendChild(modal);
     }
+    function modalborrar(callback) {
+  // Crear fondo modal
+  const modal = document.createElement("div");
+  modal.style.position = "fixed";
+  modal.style.top = 0;
+  modal.style.left = 0;
+  modal.style.width = "100vw";
+  modal.style.height = "100vh";
+  modal.style.backgroundColor = "rgba(0,0,0,0.6)";
+  modal.style.display = "flex";
+  modal.style.alignItems = "center";
+  modal.style.justifyContent = "center";
+  modal.style.zIndex = 9999;
+
+  // Contenido modal
+  const modalContent = document.createElement("div");
+  modalContent.style.background = "#fff";
+  modalContent.style.borderRadius = "12px";
+  modalContent.style.padding = "25px 30px";
+  modalContent.style.width = "320px";
+  modalContent.style.boxShadow = "0 8px 24px rgba(0,0,0,0.2)";
+  modalContent.style.textAlign = "center";
+  modalContent.style.fontFamily = "Mochiy Pop P One, sans-seri ";
+
+  // Mensaje
+  const mensaje = document.createElement("p");
+
+  mensaje.textContent = "¿Estás seguro de borrar este registro?";
+  mensaje.style.fontSize = "1.1rem";
+  mensaje.style.marginBottom = "25px";
+  mensaje.style.color = "#333";
+
+  // Contenedor botones
+  const botones = document.createElement("div");
+  botones.style.display = "flex";
+  botones.style.justifyContent = "space-between";
+
+  // Botón cancelar
+  const btnCancelar = document.createElement("button");
+  btnCancelar.textContent = "Cancelar";
+  btnCancelar.style.flex = "1";
+  btnCancelar.style.marginRight = "10px";
+  btnCancelar.style.padding = "10px 0";
+  btnCancelar.style.border = "none";
+  btnCancelar.style.borderRadius = "8px";
+  btnCancelar.style.backgroundColor = "#ccc";
+  btnCancelar.style.color = "#333";
+  btnCancelar.style.fontWeight = "600";
+  btnCancelar.style.cursor = "pointer";
+  btnCancelar.style.transition = "background-color 0.3s ease";
+  btnCancelar.onmouseenter = () => btnCancelar.style.backgroundColor = "#b3b3b3";
+  btnCancelar.onmouseleave = () => btnCancelar.style.backgroundColor = "#ccc";
+
+  // Botón confirmar
+  const btnConfirmar = document.createElement("button");
+  btnConfirmar.textContent = "Borrar";
+  btnConfirmar.style.flex = "1";
+  btnConfirmar.style.padding = "10px 0";
+  btnConfirmar.style.border = "none";
+  btnConfirmar.style.borderRadius = "8px";
+  btnConfirmar.style.backgroundColor = "#d33";
+  btnConfirmar.style.color = "#fff";
+  btnConfirmar.style.fontWeight = "700";
+  btnConfirmar.style.cursor = "pointer";
+  btnConfirmar.style.transition = "background-color 0.3s ease";
+  btnConfirmar.onmouseenter = () => btnConfirmar.style.backgroundColor = "#b22";
+  btnConfirmar.onmouseleave = () => btnConfirmar.style.backgroundColor = "#d33";
+
+  botones.appendChild(btnCancelar);
+  botones.appendChild(btnConfirmar);
+  modalContent.appendChild(mensaje);
+  modalContent.appendChild(botones);
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+
+  // Función para cerrar modal
+  function limpiar() {
+    document.body.removeChild(modal);
+    document.removeEventListener("keydown", teclaEsc);
+  }
+
+  // Eventos
+  btnConfirmar.onclick = () => {
+    limpiar();
+    callback(true);
+  };
+  btnCancelar.onclick = () => {
+    limpiar();
+    callback(false);
+  };
+
+  function teclaEsc(e) {
+    if (e.key === "Escape") {
+      limpiar();
+      callback(false);
+    }
+  }
+  document.addEventListener("keydown", teclaEsc);
+}
